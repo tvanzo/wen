@@ -1,0 +1,15 @@
+<h1>m<%= @post.body %>j</h1>
+<h1>ss</h1>
+<%= link_to "Delete", post_path(@post),
+                method:  :delete,
+                data:{confirm: 'Are you sure?'}%>
+                
+%>
+
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>
+
+              
+
+
+

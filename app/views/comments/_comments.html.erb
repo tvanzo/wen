@@ -1,0 +1,16 @@
+<% @post.comments.each do |comment| %>
+    <div class="media-list media-list-users list-group js-msgGroup">
+    <div class="media list-group-item list-group-item-action">
+                 <%= image_tag("avatar-dhg.png", class: "rounded-circle media-object d-flex align-self-start mr-3") %>
+                <div class="media-body">
+                  <p><strong><%= comment.username %></strong> </p>
+                  <div class="media-body-secondary">
+                    <%=comment.body %>
+                    <%= link_to '[X]', [comment.post, comment],
+                        method: :delete,
+                        data:{ confirm: 'Are you sure?'} %>
+                  </div>
+                </div>
+              </div>
+            </div>
+<%end%>
